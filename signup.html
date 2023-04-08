@@ -39,10 +39,11 @@
             justify-content: center;
         }
         .form{
+            /* display: flex; */
             margin: 100px;
             height: 400px;
             width: 500px;
-            border: 2px solid red;
+            /* border: 2px solid red; */
             background-color: white;
         }
         .margin{
@@ -53,6 +54,13 @@
         }
         .center{
             text-align: center;
+        }
+        .fifty{
+            display: flex;
+        }
+        .hundred{
+            /* display: flex; */
+            width: 90%;
         }
     </style>
 </head>
@@ -81,20 +89,48 @@
         </ul>
         <div id="left" class="my-2 my-lg-0">
             <button type="button" class="btn btn-danger">Sign up</button>
-            <button type="button" class="btn btn-danger">Sign in</button>
+            <button type="button" class="btn btn-danger">Login</button>
           </div>
           </div>
         </nav>
         <div id="fitimage">
             <div class="form">
-                <p class="font1 center">Sign Up</p>
-                <form action="" class="margin">
-                    <div><input type="text" placeholder="First Name"></div>
-                    <div><input type="text" placeholder="Last Name"></div>
-                    <div><input type="number" placeholder="Contact Number"></div>
-                    <div><input type="email" placeholder="Email Address"></div>
-                    <div><input type="password" placeholder="Password"></div>
-                    <div><input type="password" placeholder="Confirm Password"></div>
+                <h2 class="font3 center line">Sign Up</h2>
+                <form action="" class="labels margin">
+                    <div class="fifty">
+                        <div class="txt_field label1">
+                            <input type="text">
+                            <label for="">First Name</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="text">
+                            <label for="">Last Name</label>
+                        </div>
+                    </div>
+                        <div class="txt_field">
+                            <input type="email" class="hundred">
+                            <label for="">College Id</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="number" name="" id="" class="hundred">
+                            <label for="">Contact Number</label>
+                        </div>
+                    <div class="fifty">
+                        <div class="txt_field">
+                            <input type="password" name="" id="">
+                            <label for="">Password</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password" name="" id="">
+                            <label for="">Confirm Password</label>
+                        </div>
+                        </div>
+                        <div class="pass">Forget Password?</div>
+                        <input type="submit" value="Login" class="btn btn-danger">
+                    <div class="signuplink">
+                        Not a member?
+                        <a href="">Sign Up</a>
+                    </div>
                 </form>
             </div>
         </div>

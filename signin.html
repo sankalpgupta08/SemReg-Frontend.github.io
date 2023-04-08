@@ -10,6 +10,7 @@
         *{
          margin: 0px;
          padding: 0px;
+         box-sizing: border-box;
       }
       .font1{
         font-weight: 900;
@@ -28,23 +29,27 @@
             height: 60px;
           }
           #fitimage{
+            display: flex;
             /* border: 2px solid red; */
             color: black;
             width: 98.9vw;
-            height: 100vh;
+            height: 91vh;
             background-image: url("admin_block.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            justify-content: center;
         }
         .form{
             margin: 100px;
             height: 400px;
             width: 500px;
-            border: 2px solid red;
+            /* border: 2px solid red; */
             background-color: white;
+            /* justify-content: center; */
         }
         .margin{
-            margin: 20px;
+            margin: 40px;
+            /* padding: 20px; */
         }
         .padding{
             padding: 30px;
@@ -52,6 +57,33 @@
         .center{
             text-align: center;
         }
+        .line{
+            border-bottom: 1px solid silver;
+        }
+        input{
+            margin: 20px 20px 0px 0px;
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid silver;
+            /* color: #adadad; */
+        }
+        ::placeholder{
+            color: #adadad;
+        }
+        .font3{
+            font-weight: 800;
+            padding: 10px;
+        }
+        .pad{
+            padding: 20px 20px 0px 0px;
+        }
+        /* .txt_field span::before{
+            content: '';
+            
+
+        } */
     </style>
 </head>
 <body>
@@ -79,20 +111,28 @@
         </ul>
         <div id="left" class="my-2 my-lg-0">
             <button type="button" class="btn btn-danger">Sign up</button>
-            <button type="button" class="btn btn-danger">Sign in</button>
+            <button type="button" class="btn btn-danger">Login</button>
           </div>
           </div>
         </nav>
         <div id="fitimage">
             <div class="form">
-                <p class="font1 center">Sign In</p>
+                <h2 class="font3 center line">Sign In</h2>
                 <form action="" class="margin">
-                    <div><input type="text" placeholder="First Name"></div>
-                    <div><input type="text" placeholder="Last Name"></div>
-                    <div><input type="number" placeholder="Contact Number"></div>
-                    <div><input type="email" placeholder="Email Address"></div>
-                    <div><input type="password" placeholder="Password"></div>
-                    <div><input type="password" placeholder="Confirm Password"></div>
+                    <div class="txt_field">
+                        <input type="email" placeholder="College Id">
+                        <!-- <label for="">College Id</label> -->
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" name="" id="" placeholder="password">
+                        <!-- <label for="">Password</label> -->
+                    </div>
+                    <div class="pad pass">Forget Password?</div>
+                    <input type="submit" value="Login" class="btn btn-danger">
+                    <div class="signuplink">
+                        Not a member?
+                        <a href="">Sign Up</a>
+                    </div>
                 </form>
             </div>
         </div>
