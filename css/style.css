@@ -1,0 +1,47 @@
+.navcls{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     margin: 10px;
+    background-color: cadetblue;
+}
+h1{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bodynav{
+    display: flex;
+    flex-direction:column;
+    width: 33vh;
+    align-items: center;
+    height: 90vh;
+    background-color: cadetblue;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.maindiv{
+    /* background-color: black; */
+    display: flex;
+}
+
+.hollow{
+    display: flex;
+    flex-direction: row;
+    /* background-color: black; */
+    margin: 10px;
+    gap:10px;
+}
+
+.bodybody{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: firebrick;
+}
