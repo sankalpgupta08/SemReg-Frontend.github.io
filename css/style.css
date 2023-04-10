@@ -25,14 +25,12 @@ body{
 }
 
 .maindiv{
-    /* background-color: black; */
     display: flex;
 }
 
 .hollow{
     display: flex;
     flex-direction: row;
-    /* background-color: black; */
     margin: 10px;
     gap:10px;
 }
