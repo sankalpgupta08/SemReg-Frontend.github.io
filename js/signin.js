@@ -6,7 +6,6 @@ var msg = document.getElementById("msg")
 signInbtn.addEventListener('click',(e)=>{
     e.preventDefault()
     signIn()
-    console.log("lksf")
 })
 
 async function signIn() {
@@ -26,12 +25,14 @@ async function signIn() {
 
     await fetch("http://localhost:8080/auth/login/",params).then((res)=> res.json()).then((data)=>{
         console.log(data)
-        if(data.msg == "user created"){
+        if(data.msg == "User Created"){
+            console.log("klkajfkajkls")
             const UserData = {
                 "email" : data.email,
                 "token" : data.token
             }
             sessionStorage.setItem("userData",JSON.stringify(UserData))
+            window.location.replace("admissionform.html")
         }
         msg.style.display = "block"
         msg.children[0].innerText = data.msg
