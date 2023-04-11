@@ -19,12 +19,16 @@
             border: 1px solid green;
         }
         .middle{
-            width: 55%;
+            width: 60%;
             height: 100vh;
             border: 1px solid green;
+            overflow-y: scroll;
         }
+        .middle::-webkit-scrollbar {
+            display: none;
+            }
         .right{
-            width: 25%;
+            width: 20%;
             height: 100vh;
             border: 1px solid green;
         }
@@ -37,9 +41,95 @@
             border: 1px solid green;
         }
         .search{
+            margin: 13px 20px;
             text-decoration: none;
-            width: 100px;
-            height: 10px;
+            width: 50%;
+            height: 40px;
+            border-radius: none;
+        }
+        .database{
+            margin: 8px 20px;
+        }
+        .outer{
+            margin: 10px;
+        }
+        .list{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            border: 1px solid green;
+        }
+        .pos{
+            display: flex;
+            width: 90%;
+            border: 1px solid green;
+        }
+        .position{
+            width: 15%;
+            height: 30px;
+            border: 1px solid green;
+        }
+        .extra{
+            width: 10%;
+            /* height: 30px; */
+            border: 1px solid green;
+        }
+        .title{
+            display: flex;
+            height: 45px;
+        }
+        .tit1{
+            padding: 10px 0px 10px 5px;
+            width: 20%;
+            border: 1px solid green;
+        }
+        .tit2{
+            padding: 10px 0px;
+            width: 11%;
+            border: 1px solid green;
+        }
+        .tit3{
+            padding: 10px 0px;
+            width: 6%;
+            border: 1px solid green;
+        }
+        .tit4{
+            padding: 10px 0px;
+            width: 20%;
+            border: 1px solid green;
+        }
+        .values{
+            display: flex;
+            width: 100%;
+            height: 45px;
+            border: 1px solid green;
+        }
+        .val1{
+            padding: 10px 0px;
+            display: flex;
+            width: 20%;
+            border: 1px solid green;
+        }
+        .val2{
+            padding: 10px 0px;
+            width: 11%;
+            border: 1px solid green;
+        }
+        .val3{
+            padding: 10px 0px;
+            width: 6%;
+            border: 1px solid green;
+        }
+        .val4{
+            padding: 10px 0px;
+            width: 19%;
+            border: 1px solid green;
+        }
+        .img{
+            margin: -9px 0px 0px 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -72,9 +162,296 @@
             <nav>
                 <input class="search" type="text" placeholder="Search student,teacher..">
             </nav>
+            <h1 class="database">Database</h1>
+            <div class="outer">
+            <div class="list">
+                <div class="pos">
+                    <div class="position">Student</div>
+                    <div class="position">Teacher</div>
+                    <div class="position">Staff</div>
+                </div>
+                <div class="extra">
+
+                </div>
+            </div>
+            <div class="title">
+                <div class="tit1">Name</div>
+                <div class="tit2">Roll No.</div>
+                <div class="tit1">Course</div>
+                <div class="tit3">Age</div>
+                <div class="tit2">Gender</div>
+                <div class="tit1">Email</div>
+                <div class="tit2">Status</div>
+            </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                <div class="values">
+                    <div class="val1">
+                        <img class="img" src="/img/userlogo.png" alt="">
+                        <div style="padding:0px 0px 0px 5px;">student</div>
+                    </div>
+                    <div class="val2">20DCS009</div>
+                    <div class="val1">Computer Science</div>
+                    <div class="val3">20</div>
+                    <div class="val2">Male</div>
+                    <div class="val1">20dcs009@nith.ac.in</div>
+                    <div class="val2">Completed</div>
+                </div>
+                
+        </div>
         </div>
         <div class="right">
-            
+
         </div>
     </div>
 </body>
