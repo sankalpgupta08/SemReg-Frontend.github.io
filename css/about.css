@@ -18,13 +18,48 @@ main {
 section {
     margin-bottom: 20px;
     padding: 20px;
-    background-color: white;
+    position: relative;
+    background-color:white ;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-radius: 10px;;
+ 
 }
 section::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: beige;
+
+  transition: transform 600ms ease-in-out;
+  transform: scaleX(0);
+
+  transform-origin: left;
+  border-radius: 10px;;
+
+}
+section:hover::before,
+section:focus::before {
+  transform: scaleX(1);
+  border-radius: 10px;;
+
+}
+
+section {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+
   
 }
+
+
+/* section:hover,
+section:focus {
+  color: rgb(246, 246, 246);
+} */
 section h2 {
     margin-top: 0;
 }
