@@ -1,15 +1,7 @@
 
 
 
-#fitimage {
-    /* border: 2px solid red; */
-    color: black;
-    width: 98.9vw;
-    height: 91vh;
-    background-image: url("admin_block.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-   }@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
 :root {
   --Red: hsl(1, 90%, 64%);
   --Blue: hsl(219, 85%, 26%);
@@ -146,7 +138,7 @@ body {
     /* border: 2px solid red; */
     color: black;
    
-    background-image: url("admin_block.jpg");
+    background-image: url("/img/admin_block.jpg");
     background-repeat: no-repeat;
     background-size: cover;
    }
