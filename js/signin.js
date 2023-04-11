@@ -32,7 +32,7 @@ async function signIn() {
                 "token" : data.token
             }
             sessionStorage.setItem("userData",JSON.stringify(UserData))
-            window.location.replace("admissionform.html")
+            window.location.replace("home.html")
         }
         msg.style.display = "block"
         msg.children[0].innerText = data.msg
