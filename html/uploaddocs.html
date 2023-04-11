@@ -97,7 +97,7 @@
             display: flex;
             /* justify-content: center; */
         }
-        input{
+        .space{
             margin: 20px;
         }
         .type{
@@ -109,6 +109,60 @@
         .common2:hover{
             background-color: rgb(222, 204, 204);
             cursor: pointer;
+        }
+        .struc{
+            margin: 30px;
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        .boxing{
+            /* width: 50vh; */
+            gap: 40px;
+        }
+        .docs{
+            margin: 30px;
+            width: 60%;
+        }
+        .common3{
+            display: flex;
+            margin: 3px;
+            padding: 5px 10px;
+            /* background-color: #6c757d; */
+            background-color: rgb(223, 223, 223);
+            color: black;
+            border-radius: 2px;
+            justify-content: space-between;
+        }
+
+        .common4{
+            display: flex;
+        }
+        .nofile{
+            margin: 0px 10px;
+        }
+        .btn{
+            width: 100px;
+            height: 24px;
+            color: white;
+            font-weight: 900;
+            background-color: rgb(42, 35, 35);
+            border: none;
+            cursor: pointer;
+        }
+        /* .btn:hover{
+            background-color: rgb(64, 52, 52);;
+        } */
+        .upload{
+            cursor: pointer;
+            margin: 10px;
+            width: 100px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            font-weight: 900;
+            border: none;
+
         }
     </style>
 </head>
@@ -146,15 +200,56 @@
                     <img src="/img/logo.png" alt="" class="logo">
                     <h1 style="padding: 20px;">National Institute of Technology, Hamirpur</h1>
                 </div>
-                <div class="download">
-                    <h2 style="text-align: center;">Download Registration Form</h2>
-                    <h3 style="padding: 5px;">(Academic Year 2022-23)</h3>
+                <div class="struc">
+                    <div class="boxing">
+                        <h3>Select your Caste</h3>
+                            <input class="space" type="radio" name="caste" id=""><span>General</span>
+                            <input class="space" type="radio" name="caste" id=""><span>Obc-Ncl</span>
+                            <input class="space" type="radio" name="caste" id=""><span>Sc/St</span>
+                    </div>
+                    <div class="boxing">
+                        <h3>Select your Income</h3>
+                            <input class="space" type="radio" name="income" id=""><span>Less than ₹100000</span>
+                            <input class="space" type="radio" name="income" id=""><span>Less than ₹500000</span>
+                            <input class="space" type="radio" name="income" id=""><span>More than ₹500000</span>
+                    </div>
                 </div>
-                <div class="type">
-                    <h3 class="common2">UG</h3>
-                    <h3 class="common2">PG</h3>
-                    <h3 class="common2">Ph.D Form-1</h3>
-                    <h3 class="common2">Ph.D Form-2</h3>
+                <div class="docs">
+                    <h3>Upload Docs</h3>
+                    <div class="common3">
+                        <div>Registration Form</div>
+                        <div class="common4">
+                            <div class="nofile">No file Chosen</div>
+                            <input type="button" value="Choose File" class="btn">
+                        </div>
+                    </div>
+                    <div class="common3">
+                        <div>Caste Certificate</div>
+                        <div class="common4">
+                            
+                            <div class="nofile">No file Chosen</div>
+                            <input type="button" value="Choose File" class="btn">
+                        </div>
+                        
+                    </div>
+                    <div class="common3">
+                        <div>Income Certificate</div>
+                        <div class="common4">
+                            
+                            <div class="nofile">No file Chosen</div>
+                            <input type="button" value="Choose File" class="btn">
+                        </div>
+                        
+                    </div>
+                    <div class="common3">
+                        <div>Fee Receipt</div>
+                        <div class="common4">
+                            <div class="nofile">No file Chosen</div>
+                                <input type="button" value="Choose File" class="btn">
+                            </div>
+
+                    </div>
+                    <button class="upload" type="submit">Upload</button>
                 </div>
             </div>
         </div>
