@@ -3,6 +3,23 @@ var pass = document.getElementById("pass")
 var signInbtn = document.getElementById("signInbtn")
 var msg = document.getElementById("msg")
 var loading = document.getElementById("loading")
+var loginMember = document.querySelectorAll('input[name="loginMember"]')
+
+var isStudent = true
+
+
+
+gender.forEach(gen=>{
+    gen.addEventListener('change',(e)=>{
+        if(e.target.value == "student"){
+            isStudent = true
+        }else{
+            isStudent = false
+        }
+    })
+})
+
+
 
 signInbtn.addEventListener('click', (e) => {
     e.preventDefault()
