@@ -29,20 +29,21 @@ async function signIn() {
 
     await fetch("https://semreg.study-ezy.tech/auth/login/",params).then((res)=> res.json()).then((data)=>{
         console.log(data.msg)
-        if(data.msg == "User Created"){
-            loading.style.innerText = "Sucessfully Logged In !.."
+        if(data.msg == "Logged In"){
+            loading.children[0].innerText = "Sucessfully Logged In !.."
 
             const UserData = {
                 "email": data.email,
-                "token": data.token
+                "token": data.token,
+                "fbId" : data.id
             }
             sessionStorage.setItem("userData", JSON.stringify(UserData))
             setTimeout(() => {
-                window.location.replace("home.html")
+                loading.style.display = "none"
+                window.location.replace("userDetail.html")
             }, 2000);
         }
 
-        loading.style.display = "none"
         msg.innerHTML = `<div class="alert alert-warning alert-dismissible fade show position-absolute"
         style="margin-top: 11vh;margin-left: 1vw;" role="alert">
         <p>${data.msg}</p>

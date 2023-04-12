@@ -20,6 +20,7 @@ var msg = document.getElementById('msg');
 
 
 var userData
+var userDetail
 var isfeeDeduction = false
 var toDisablebtn = true
 
@@ -27,9 +28,13 @@ var toDisablebtn = true
 // function for checking if any user is logged in or not
 function isuserSignedIn(){
     userData = sessionStorage.getItem("userData")
+    userDetail = sessionStorage.getItem("userDetail")
     if(userData == null){
-        window.location.replace("signin.html")
-    }else{
+        window.location.replace("signin.html")}
+    // }else if(userDetail == null){
+    //     window.location.replace("userDetail.html")
+    // }
+    else{
         userData = JSON.parse(userData)
         currUserName.innerText = userData.email
     }
@@ -95,14 +100,26 @@ dashNoti.addEventListener('click',(e)=>{
 })
 
 
+dashLogout.addEventListener('click',(e)=>{
+    logout()
+})
+
+
+
+async function logout(){
+    loading.style.display = "flex"
+    loading.children[0].innerText = "Logging Out !.."
+    await fetch("https://semreg.study-ezy.tech/auth/logout/",{method:"POST"}).then((res)=>res.json()).then((data)=>{
+        sessionStorage.clear()
+        setTimeout(() => {
+            window.location.replace("signin.html")
+        }, 1000);
+    })
+}
+
 
 
 async function uploadDoc(){
-    // const formData = new FormData()
-    // formData.append('user-reg',regForm.files[0])
-    // formData.append('user-cast',castCert.files[0])
-    // formData.append('user-inc',incCert.files[0])
-    // formData.append('user-fee',feeRecp.files[0])
     
     const docs = {
         registrationForm : regForm.value,
