@@ -24,7 +24,7 @@
     }
 
     .abtn {
-      margin: 5px;
+      /* margin: 5px; */
       font-weight: 700;
     }
 
@@ -37,6 +37,8 @@
     #fitimage {
       display: flex;
       color: black;
+      width: 100vw;
+      height: 89.8vh;
       width: 100vw;
       height: 89.8vh;
       background-image: url("/img/admin_block.jpg");
@@ -90,7 +92,16 @@
     .pad {
       padding: 20px 20px 0px 0px;
     }
-
+    .flex{
+      display: flex;
+      padding: 20px;
+      padding-bottom: 0px;
+      padding-top: 10px;
+    }
+    .who{
+      margin-top: 15px;
+      margin-right: 100px;
+    }
     /* .txt_field span::before{
             content: '';
             
@@ -101,55 +112,42 @@
 
 <body>
 
-  <div class="alert alert-warning alert-dismissible fade show position-absolute" id="msg" style="margin-top: 11vh;margin-left: 1vw; display: none;" role="alert">
-    <p></p>
-    <button type="button" class="btn-close abtn" data-bs-dismiss="alert" aria-label="Close"></button>
+  <div id="msg">
+
   </div>
 
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
     <div>
-    <img src="/img/logo.png" alt="not found" class="logo">
-    <a class="navbar-brand font1" href="index.html">National Institute of Technology, Hamirpur</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <img src="/img/logo.png" alt="not found" class="logo">
+      <a class="navbar-brand font1" href="index.html">National Institute of Technology, Hamirpur</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
-
-    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link font2" href="#">About</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link font2" href="#">Notification</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link font2" href="#">Results</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link font2" href="#">Courses</a>
-        </li>
-      </ul>
-    </div> -->
     <div id="left" class="my-2 my-lg-0">
-      <a href="signup.html"><butston type="button" class="btn btn-danger abtn">Sign up</button></a>
+      <a href="signup.html">
+        <butston type="button" class="btn btn-danger abtn">Sign up</button>
+      </a>
       <button type="button" class="btn btn-danger abtn">Login</button>
     </div>
   </nav>
 
+
   <div id="fitimage">
     <div class="form">
-      <h2 class="font3 center line">Sign In</h2>
+      <h2 class="font3 center line">Login</h2>
       <form action="" class="margin">
         <div class="txt_field">
           <input type="email" placeholder="College Id" id="colgId">
-          <!-- <label for="">College Id</label> -->
         </div>
         <div class="txt_field">
           <input type="password" name="" id="pass" placeholder="password">
-          <!-- <label for="">Password</label> -->
+        </div>
+        <div class="flex">
+            <input type="radio" name="who" id=""><div class="who">Student</div>
+            <input type="radio" name="who" id=""><div class="who">Teacher</div>
         </div>
         <div class="pad pass">Forget Password?</div>
         <input type="submit" value="Login" id="signInbtn" class="btn btn-danger abtn">
@@ -160,7 +158,18 @@
       </form>
     </div>
   </div>
+
+
+  <div id="loading" style="height: 100vh;width: 100vw;background-color: rgba(0, 0, 0, .7);position: absolute;top: 0;display: none; justify-content: center;align-items: center;">
+    <div style="color: white;height: fit-content;width: fit-content;font-size: 2rem;">
+      Logging In ...
+    </div>
+  </div>
+
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  <script src="/js/signin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="/js/signin.js"></script>
+
 </html>

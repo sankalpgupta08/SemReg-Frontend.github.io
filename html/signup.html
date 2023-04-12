@@ -18,10 +18,11 @@
       .font2{
         font-weight: 800;
       }
-        .btn{
-            margin: 5px;
-            font-weight: 700;
-          }
+      .font3{
+        font-weight: 800;
+        padding: 10px;
+        border-bottom: 1px solid silver;
+      }
           .logo{
             border-radius: 50%;
             width: 60px;
@@ -32,7 +33,7 @@
             /* border: 2px solid red; */
             color: black;
             width: 100vw;
-            height: 89.8vh;
+            height: 90.35vh;
             background-image: url("/img/admin_block.jpg");
             background-repeat: no-repeat;
             background-size: cover;
@@ -47,7 +48,7 @@
             background-color: white;
         }
         .margin{
-            margin: 20px;
+            margin: 40px;
         }
         .padding{
             padding: 30px;
@@ -60,8 +61,37 @@
         }
         .hundred{
             /* display: flex; */
-            width: 90%;
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            border-bottom: 2px solid silver;
         }
+        .txt_field{
+            padding: 20px 20px 0px 0px;
+        }
+        .txt_field2{
+            margin: 20px 0px 0px 0px;
+        }
+        ::placeholder {
+        color: #adadad;
+        }
+        .abtn {
+            font-weight: 700;
+            width: 95.5%;
+    }
+    .flex{
+      display: flex;
+      padding: 20px;
+      padding-bottom: 0px;
+      padding-top: 10px;
+    }
+    .who{
+      margin-top: 10px;
+      margin-right: 100px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
     </style>
 </head>
 <body>
@@ -73,66 +103,29 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         </div>
-<!--       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link font2" href="#">About <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link font2" href="#">Notification <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link font2" href="#">Results <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link font2" href="#">Courses <span class="sr-only">(current)</span></a>
-            </li>
-        </ul> -->
         <div id="left" class="my-2 my-lg-0">
             <button type="button" class="btn btn-danger">Sign up</button>
             <a href="signin.html"><button type="button" class="btn btn-danger">Login</button></a>
           </div>
-          <!-- </div> -->
         </nav>
         <div id="fitimage">
             <div class="form">
                 <h2 class="font3 center line">Sign Up</h2>
                 <form action="" class="labels margin">
-                    <div class="fifty">
-                        <div class="txt_field label1">
-                            <input type="text" id="firstName">
-                            <label for="">First Name</label>
+                        <div class="txt_field">
+                            <input type="email" class="hundred" id="colgId" placeholder="College Id">
                         </div>
                         <div class="txt_field">
-                            <input type="text" id="lastName">
-                            <label for="">Last Name</label>
-                        </div>
-                    </div>
-                        <div class="txt_field">
-                            <input type="email" class="hundred" id="colgId">
-                            <label for="">College Id</label>
+                            <input type="password" name="" id="pass" class="hundred" placeholder="Password">
                         </div>
                         <div class="txt_field">
-                            <input type="number" name="" id="contactNo" class="hundred">
-                            <label for="">Contact Number</label>
+                            <input type="password" name="" id="confirmPass" class="hundred" placeholder="Confirm Password">
                         </div>
-                    <div class="fifty">
-                        <div class="txt_field">
-                            <input type="password" name="" id="pass">
-                            <label for="">Password</label>
+                        <div class="flex">
+                            <input type="radio" name="who" id=""><div class="who">Student</div>
+                            <input type="radio" name="who" id=""><div class="who">Teacher</div>
                         </div>
-                        <div class="txt_field">
-                            <input type="password" name="" id="confirmPass">
-                            <label for="">Confirm Password</label>
-                        </div>
-                        </div>
-                        <div class="pass">Forget Password?</div>
-                        <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-danger">
-                    <div class="signuplink">
-                        Not a member?
-                        <a href="">Sign Up</a>
-                    </div>
+                        <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-danger abtn txt_field2">
                 </form>
             </div>
         </div>

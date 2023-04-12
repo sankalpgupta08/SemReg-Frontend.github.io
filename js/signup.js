@@ -27,14 +27,19 @@ async function signUp(){
         body: JSON.stringify(userCrendentials)
     }
     loading.style.display = "flex"
-    await fetch("http://localhost:8080/auth/signup/",params).then((res)=> res.text()).then((data)=>{
-        if(data == "verification link send"){
+    await fetch("https://semreg.study-ezy.tech/auth/signup/",params).then((res)=> res.json()).then((data)=>{
+        if(data.msg == "verification link send"){
             loading.children[0].innerText = "Verification link has been sent to your email !.."
             setTimeout(() => {
                 loading.style.display = "none"
             }, 2000);
 
             window.location.replace("signin.html");
+        }else{
+            loading.children[0].innerText = data.msg
+            setTimeout(() => {
+                loading.style.display = "none"
+            }, 2000);
         }
     })
 }

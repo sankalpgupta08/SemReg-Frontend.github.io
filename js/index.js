@@ -1,15 +1,19 @@
-var test = document.getElementById("test")
 
 async function getdata(){
-    await fetch("https://jsonplaceholder.typicode.com/todos/").then((res)=> res.json()).then((data)=>{
-        // data.forEach(element => {
-        //    test.innerHTML += `
-        //     <h3> ${element.id} <h3>
-        //     <p> ${element.title}<p>
-        //    `
-        // });
-        console.log(data)
-    })
-}
+    var userdata 
+    console.log("hello")
+      await fetch('https://semreg.study-ezy.tech/semreg/user')
+     .then(response => response.json())
+     .then(data => {
+       // Do something with the data
+    //    userdata= data
+    console.log("jlskdf")
+       console.log(data)
+     })
+     .catch(error => {
+        console.log(error)
+       // Handle the error
+     });
+    }
 
 getdata()
