@@ -33,7 +33,7 @@
             /* border: 2px solid red; */
             color: black;
             width: 100vw;
-            height: 89.8vh;
+            height: 90.35vh;
             background-image: url("/img/admin_block.jpg");
             background-repeat: no-repeat;
             background-size: cover;
@@ -80,6 +80,18 @@
             font-weight: 700;
             width: 95.5%;
     }
+    .flex{
+      display: flex;
+      padding: 20px;
+      padding-bottom: 0px;
+      padding-top: 10px;
+    }
+    .who{
+      margin-top: 10px;
+      margin-right: 100px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
     </style>
 </head>
 <body>
@@ -108,6 +120,10 @@
                         </div>
                         <div class="txt_field">
                             <input type="password" name="" id="confirmPass" class="hundred" placeholder="Confirm Password">
+                        </div>
+                        <div class="flex">
+                            <input type="radio" name="who" id=""><div class="who">Student</div>
+                            <input type="radio" name="who" id=""><div class="who">Teacher</div>
                         </div>
                         <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-danger abtn txt_field2">
                 </form>

@@ -92,7 +92,16 @@
     .pad {
       padding: 20px 20px 0px 0px;
     }
-
+    .flex{
+      display: flex;
+      padding: 20px;
+      padding-bottom: 0px;
+      padding-top: 10px;
+    }
+    .who{
+      margin-top: 15px;
+      margin-right: 100px;
+    }
     /* .txt_field span::before{
             content: '';
             
@@ -135,6 +144,10 @@
         </div>
         <div class="txt_field">
           <input type="password" name="" id="pass" placeholder="password">
+        </div>
+        <div class="flex">
+            <input type="radio" name="who" id=""><div class="who">Student</div>
+            <input type="radio" name="who" id=""><div class="who">Teacher</div>
         </div>
         <div class="pad pass">Forget Password?</div>
         <input type="submit" value="Login" id="signInbtn" class="btn btn-danger abtn">
