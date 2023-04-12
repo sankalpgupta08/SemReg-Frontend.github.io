@@ -15,6 +15,10 @@ var dashDash = document.getElementById('dashDash');
 var dashDownlRegForm = document.getElementById('dashDownlRegForm');
 var dashNoti = document.getElementById('dashNoti');
 var dashLogout = document.getElementById('dashLogout');
+var loading = document.getElementById('loading');
+var msg = document.getElementById('msg');
+
+
 var userData
 var isfeeDeduction = false
 var toDisablebtn = true
@@ -116,16 +120,23 @@ async function uploadDoc(){
         },
         body: JSON.stringify(docs)
     }
+
+    loading.style.display = "flex"
     
     // make req
     await fetch("https://semreg.study-ezy.tech/semreg/doc/",params).then((res)=>res.json()).then((body)=>{
-        console.log(body)
+        msg.innerHTML = `
+        <div class="alert alert-warning alert-dismissible fade show position-absolute"
+        style="margin-top: 11vh;margin-left: 1vw;" role="alert">
+        <p>Data Posted !!!</p>
+        <button type="button" class="btn-close abtn" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+        `
+
+        loading.style.display = "none"
     })
     
 }
-
-
-
 
 
 isuserSignedIn()

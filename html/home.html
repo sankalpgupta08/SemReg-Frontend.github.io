@@ -193,10 +193,29 @@
             border: none;
 
         }
+        .doc{
+            display: flex;
+            /* width: 70%; */
+            margin: 10px;
+            justify-content: space-between;
+            padding: 5px;
+        }
+        .inp{
+            width: 400px;
+            height: 30px;
+            /* border: none; */
+            /* border-bottom: 1px solid silver; */
+        }
     </style>
 </head>
 
 <body>
+
+    <div id="msg">
+
+    </div>
+
+
     <div class="main">
         <div class="left">
             <div class="collegename">
@@ -254,38 +273,24 @@
                         <p>Fee to Pay : </p>
                     </div>
                     <div class="docs">
-                        <h3>Upload Docs</h3>
-                        <div class="common3">
+                        <h3>Upload Google Drive Url</h3>
+                        <div class="doc">
                             <div>Registration Form</div>
-                            <div class="common4">
-                                <!-- <div class="nofile">No file Chosen</div> -->
-                                <input type="file" id="regForm" value="Choose File" class="btn">
-                            </div>
+                            <input class="inp" type="text" id="regForm">
                         </div>
-                        <div class="common3">
-                            <div>Caste Certificate</div>
-                            <div class="common4">
-
-                                <!-- <div class="nofile">No file Chosen</div> -->
-                                <input type="file" id="castCert" value="Choose File" class="btn">
-                            </div>
-
-                        </div>
-                        <div class="common3">
-                            <div>Income Certificate</div>
-                            <div class="common4">
-
-                                <!-- <div class="nofile">No file Chosen</div> -->
-                                <input type="file" id="incCert" value="Choose File" class="btn">
-                            </div>
-
-                        </div>
-                        <div class="common3">
+                        <div class="doc">
                             <div>Fee Receipt</div>
-                            <div class="common4">
-                                <!-- <div class="nofile">No file Chosen</div> -->
-                                <input type="file" id="feeRecp" value="Choose File" class="btn">
-                            </div>
+                            <input class="inp" type="text" id="feeRecp">
+                            
+                        </div>
+                        <div class="doc">
+                            <div>Caste Certificate</div>
+                            <input class="inp" type="text" id="castCert">
+                            
+                        </div>
+                        <div class="doc">
+                            <div>Income Certificate</div>
+                            <input class="inp" type="text" id="incCert">
 
                         </div>
                         </div>
@@ -322,6 +327,14 @@
 
 
     </div>
+
+
+    <div id="loading" style="height: 100vh;width: 100vw;background-color: rgba(0, 0, 0, .7);position: absolute;top: 0;display: none; justify-content: center;align-items: center;">
+        <div style="color: white;height: fit-content;width: fit-content;font-size: 2rem;">
+         Uploading Data...
+        </div>
+      </div>
+
 </body>
 <script src="/js/home.js"></script>
 
