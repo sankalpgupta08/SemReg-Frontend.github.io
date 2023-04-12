@@ -14,8 +14,6 @@ async function getdata(){
         console.log(error)
        // Handle the error
      });
-   
-console.log("fj")
-}
+    }
 
 getdata()

@@ -13,6 +13,8 @@ var downloadFromRight = document.getElementById('downloadFromRight');
 var homeRight = document.getElementById('homeRight');
 var dashDash = document.getElementById('dashDash');
 var dashDownlRegForm = document.getElementById('dashDownlRegForm');
+var dashNoti = document.getElementById('dashNoti');
+var dashLogout = document.getElementById('dashLogout');
 var userData
 var isfeeDeduction = false
 var toDisablebtn = true
@@ -29,7 +31,6 @@ function isuserSignedIn(){
     }
 }
 
-isuserSignedIn()
 
 
 // to display Dashboard content
@@ -82,13 +83,23 @@ uploadbtn.addEventListener('click',(e)=>{
     uploadDoc()
 })
 
+
+// navigate to noti
+dashNoti.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.replace("noti.html")
+})
+
+
+
+
 async function uploadDoc(){
     // const formData = new FormData()
     // formData.append('user-reg',regForm.files[0])
     // formData.append('user-cast',castCert.files[0])
     // formData.append('user-inc',incCert.files[0])
     // formData.append('user-fee',feeRecp.files[0])
-
+    
     const docs = {
         registrationForm : regForm.value,
         feeDeduction : isfeeDeduction,
@@ -96,7 +107,7 @@ async function uploadDoc(){
         incomeCertificate : incCert.value,
         castCertificate : castCert.value
     }
-
+    
     const params = {
         method : 'POST',
         headers: {
@@ -105,11 +116,16 @@ async function uploadDoc(){
         },
         body: JSON.stringify(docs)
     }
-
+    
     // make req
-    await fetch("https://semreg.study-ezy.tech/semreg/doc/").then((res)=>res.json()).then((body)=>{
-    console.log(body)
+    await fetch("https://semreg.study-ezy.tech/semreg/doc/",params).then((res)=>res.json()).then((body)=>{
+        console.log(body)
     })
-
+    
 }
 
+
+
+
+
+isuserSignedIn()
