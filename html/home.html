@@ -203,8 +203,16 @@
         .inp{
             width: 400px;
             height: 30px;
-            /* border: none; */
-            /* border-bottom: 1px solid silver; */
+            border: none;
+            border-bottom: 1px solid silver;
+            /* font-weight: 900; */
+        }
+        input::placeholder{
+            color: #adadad;
+        }
+        input[type=text]:focus{
+            /* outline: 2px solid ; */
+            outline: none;
         }
     </style>
 </head>
@@ -296,22 +304,18 @@
 
                         </div> -->
                         <div class="doc">
-                            <div>Registration Form</div>
-                            <input class="inp" type="text">
+                            <input class="inp" type="text" placeholder="Registration Form" id="regform">
                         </div>
                         <div class="doc">
-                            <div>Fee Receipt</div>
-                            <input class="inp" type="text">
+                            <input class="inp" type="text" placeholder="Fee Receipt" id="feeRecp">
                             
                         </div>
                         <div class="doc">
-                            <div>Caste Certificate</div>
-                            <input class="inp" type="text">
+                            <input class="inp" type="text" placeholder="Caste Certificate" id="castCert">
                             
                         </div>
                         <div class="doc">
-                            <div>Income Certificate</div>
-                            <input class="inp" type="text">
+                            <input class="inp" type="text" placeholder="Income Certificate" id="incCert">
 
                         </div>
                         <button class="upload" id="uploadbtn" type="submit">Upload</button>
