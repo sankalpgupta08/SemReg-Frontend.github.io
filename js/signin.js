@@ -26,8 +26,8 @@ async function signIn() {
 
     loading.style.display = "flex"
 
-    await fetch("http://localhost:8080/auth/login/",params).then((res)=> res.json()).then((data)=>{
-        console.log(data)
+    await fetch("https://semreg.study-ezy.tech/auth/login/",params).then((res)=> res.json()).then((data)=>{
+        console.log(data.msg)
         if(data.msg == "User Created"){
             loading.style.innerText = "Sucessfully Logged In !.."
 
@@ -42,7 +42,11 @@ async function signIn() {
         }
 
         loading.style.display = "none"
-        msg.style.display = "block"
+        msg.innerHTML = `<div class="alert alert-warning alert-dismissible fade show position-absolute"
+        style="margin-top: 11vh;margin-left: 1vw;" role="alert">
+        <p>${data.msg}</p>
+        <button type="button" class="btn-close abtn" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>`
         msg.children[0].innerText = data.msg
     
     }
