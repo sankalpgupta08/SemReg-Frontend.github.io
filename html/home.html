@@ -221,6 +221,12 @@
 </head>
 
 <body>
+
+    <div id="msg">
+
+    </div>
+
+
     <div class="main">
         <div class="left">
             <div class="collegename">
@@ -235,6 +241,12 @@
             </div>
             <div class="common" id="dashDownlRegForm">
                 <h3>Download Registration Form</h3>
+            </div>
+            <div class="common" id="dashNoti">
+                <h3>Notifications</h3>
+            </div>
+            <div class="common" id="dashLogout">
+                <h3>Log Out</h3>
             </div>
         </div>
         <div class="right">
@@ -276,40 +288,8 @@
                     </div>
                     <div class="docs">
                         <h3>Upload Google Drive Url</h3>
-                         <!-- <div class="common3">
-                            <div>Registration Form</div>
-                            <div class="common4">
-                                <div class="nofile">No file Chosen</div>
-                                <input type="file" id="regForm" value="Choose File" class="btn">
-                            </div>
-                        </div>
-                        <div class="common3">
-                            <div>Caste Certificate</div>
-                            <div class="common4">
-
-                                <div class="nofile">No file Chosen</div>
-                                <input type="file" id="castCert" value="Choose File" class="btn">
-                            </div>
-
-                        </div>
-                        <div class="common3">
-                            <div>Income Certificate</div>
-                            <div class="common4">
-
-                                <div class="nofile">No file Chosen</div>
-                                <input type="file" id="incCert" value="Choose File" class="btn">
-                            </div>
-
-                        </div>
-                        <div class="common3">
-                            <div>Fee Receipt</div>
-                            <div class="common4">
-                                <div class="nofile">No file Chosen</div>
-                                <input type="file" id="feeRecp" value="Choose File" class="btn">
-                            </div>
-
-                        </div> -->
                         <div class="doc">
+
                             <input class="inp" type="text" placeholder="Registration Form" id="regform">
                         </div>
                         <div class="doc">
@@ -324,10 +304,10 @@
                             <input class="inp" type="text" placeholder="Income Certificate" id="incCert">
 
                         </div>
-                        <button class="upload" id="uploadbtn" type="submit">Upload</button>
+                        </div>
+                        <button class="upload" id="uploadbtn" type="submit" disabled>Upload</button>
                     </div>
                 </div>
-            </div>
 
 
             <!-- Code for Download form -->
@@ -350,11 +330,21 @@
                 </div>
 
             </div>
+
+
         </div>
 
 
 
     </div>
+
+
+    <div id="loading" style="height: 100vh;width: 100vw;background-color: rgba(0, 0, 0, .7);position: absolute;top: 0;display: none; justify-content: center;align-items: center;">
+        <div style="color: white;height: fit-content;width: fit-content;font-size: 2rem;">
+         Uploading Data...
+        </div>
+      </div>
+
 </body>
 <script src="/js/home.js"></script>
 
