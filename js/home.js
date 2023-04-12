@@ -14,6 +14,8 @@ var homeRight = document.getElementById('homeRight');
 var dashDash = document.getElementById('dashDash');
 var dashDownlRegForm = document.getElementById('dashDownlRegForm');
 var userData
+var isfeeDeduction = false
+var toDisablebtn = true
 
 
 // function for checking if any user is logged in or not
@@ -49,26 +51,21 @@ dashDownlRegForm.addEventListener('click',(e)=>{
 caste.forEach(currCaste=>{
     currCaste.addEventListener('change',(e)=>{
         if(e.target.value == "sc"){
+            uploadbtn.disabled = false
             incomeDiv.style.display = "none"
-            toPayFee.innerText = "Fee to Pay : ₹8000"
+            toPayFee.innerText = "Fee to Pay : ₹9000"
         }else{
             incomeDiv.style.display = "block"
             income.forEach(currInc=>{
                 currInc.addEventListener('change',(e1)=>{
-                    if(e.target.value == "gen" && e1.target.value == "1"){
-                        toPayFee.innerText = "Fee to Pay : ₹100000"
-                    }else if(e.target.value == "gen" && e1.target.value == "5"){
-                        toPayFee.innerText = "Fee to Pay : ₹500000"
-                    }else if(e.target.value == "gen" && e1.target.value == "m5"){
-                        toPayFee.innerText = "Fee to Pay : ₹800000"
-                    }else if(e.target.value == "obc" && e1.target.value == "1"){
-                        toPayFee.innerText = "Fee to Pay : ₹100000"
-                    }else if(e.target.value == "obc" && e1.target.value == "5"){
-                        toPayFee.innerText = "Fee to Pay : ₹500000"
-                    }else if(e.target.value == "obc" && e1.target.value == "m5"){
-                        toPayFee.innerText = "Fee to Pay : ₹8500000"
-                    }else if(e.target.value == "sc"){
-                        toPayFee.innerText = "Fee to Pay : ₹8500000"
+                    isfeeDeduction = true
+                    uploadbtn.disabled = false
+                    if((e.target.value == "gen" || e.target.value == "obc") && e1.target.value == "1"){
+                        toPayFee.innerText = "Fee to Pay : ₹9000"
+                    }else if((e.target.value == "gen" || e.target.value == "obc")  && e1.target.value == "5"){
+                        toPayFee.innerText = "Fee to Pay : ₹29833"
+                    }else if((e.target.value == "gen" || e.target.value == "obc") && e1.target.value == "m5"){
+                        toPayFee.innerText = "Fee to Pay : ₹71500"
                     }
                 })
             })
@@ -81,17 +78,38 @@ caste.forEach(currCaste=>{
 // uploading docs
 uploadbtn.addEventListener('click',(e)=>{
     e.preventDefault()  
+    console.log("kle")
     uploadDoc()
 })
 
 async function uploadDoc(){
-    const formData = new FormData()
-    formData.append('user-reg',regForm.files[0])
-    formData.append('user-cast',castCert.files[0])
-    formData.append('user-inc',incCert.files[0])
-    formData.append('user-fee',feeRecp.files[0])
+    // const formData = new FormData()
+    // formData.append('user-reg',regForm.files[0])
+    // formData.append('user-cast',castCert.files[0])
+    // formData.append('user-inc',incCert.files[0])
+    // formData.append('user-fee',feeRecp.files[0])
+
+    const docs = {
+        registrationForm : regForm.value,
+        feeDeduction : isfeeDeduction,
+        feeReceipt : feeRecp.value,
+        incomeCertificate : incCert.value,
+        castCertificate : castCert.value
+    }
+
+    const params = {
+        method : 'POST',
+        headers: {
+            'Content-Type': 
+            'application/json'
+        },
+        body: JSON.stringify(docs)
+    }
 
     // make req
+    await fetch("https://semreg.study-ezy.tech/semreg/doc/").then((res)=>res.json()).then((body)=>{
+    console.log(body)
+    })
 
 }
 

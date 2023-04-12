@@ -17,7 +17,6 @@ async function signIn() {
     
     const params = {
         method : "POST",
-        // mode:'no-cors',
         headers: {
             'Content-Type': 
             'application/json'
@@ -27,7 +26,7 @@ async function signIn() {
 
     loading.style.display = "flex"
 try{
-    await fetch("http://localhost:8080/auth/login/",params).then((res)=> res.json()).then((data)=>{
+    await fetch("https://semreg.study-ezy.tech/auth/login/",params).then((res)=> res.json()).then((data)=>{
         console.log(data)
         if(data.msg == "User Created"){
             loading.style.innerText = "Sucessfully Logged In !.."
