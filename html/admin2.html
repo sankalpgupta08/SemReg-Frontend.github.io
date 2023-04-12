@@ -18,22 +18,22 @@
             box-sizing: border-box;
             /* background-color: aqua; */
         }
-        body{
+        /* body{ */
             /* background-color: #1877F2; */
             /* background-color: #e4e6eb; */
-            background-color: #E4E6EB;
-        }
+            /* background-color: #E4E6EB; */
+        /* } */
         .main{
             display: flex;
             /* margin: 10px; */
             border-radius: 1%;
+            margin: 5px;
             /* background-color: white; */
-            margin: 8px;
+            /* margin: 8px; */
         }
         .left{
             /* background-color: rgb(236, 255, 251); */
             /* background-color: #ffff; */
-
             width: 15%;
             height: 98vh;
             /* color: white; */
@@ -51,11 +51,13 @@
         .middle{
             width: 60%;
             height: 98vh;
-            margin-left: 4px;
-            margin-right: 4px;
+            /* margin-left: 4px; */
+            /* margin-right: 4px; */
             border-radius: 3px;
             /* border: 1px solid green; */
             overflow-y: scroll;
+            border-left: 0.3px solid #adadad;
+            border-right: 0.3px solid #adadad;
             background-color: white;
         }
         .middle::-webkit-scrollbar {
@@ -66,6 +68,7 @@
             width: 25%;
             height: 98vh;
             border-radius:  3px;
+            padding-left: 15px;
             /* border: 1px solid green; */
             background-color: white;
         }
@@ -85,7 +88,7 @@
             display: flex;
             height: 6%;
             padding: 10px 0px 0px 20px;
-            color: #5f6263;
+            color: #969696;
             margin-top: 10px;
             /* color: #1dfe9c; */
             /* border: 1px solid green; */
@@ -95,9 +98,9 @@
             /* background-color: #2884fd;    */
             cursor: pointer;
             /* border-left:2px solid #1877f2; */
-            border-left:2px solid #1ee47a;
+            border-left:2px solid #04AA6D;
             /* color: #1877f2; */
-            color: #1ee47a;
+            color: #04AA6D;
         }
         .search{
             margin: 13px 20px;
@@ -106,6 +109,7 @@
             height: 40px;
             background-color: #E4E6EB;
             border: none;
+            outline: none;
             padding-left: 10px;
             border-radius: 2%;
         }
@@ -129,7 +133,7 @@
         .position{
             width: 15%;
             height: 30px;
-            color: #5f6263;
+            color: #adadad;
             font-weight: 900;
             /* border: 1px solid green; */
         }
@@ -167,12 +171,12 @@
             width: 100%;
             height: 45px;
             /* border: 1px solid green; */
-            color: #5f6263;
-            font-weight: 900;
+            color: #adadad;
+            /* font-weight: 900; */
         }
         .values:hover{
             /* background-color: rgb(7, 199, 148); */
-            background-color: #18cf80;
+            background-color: #04AA6D;
             color: white;
             cursor: pointer;
             font-weight: 900;
@@ -256,7 +260,7 @@
         }
         .fields{
             width: 50%;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
         .alldetails{
             margin-top: 50px;
@@ -276,12 +280,11 @@
         .forms{
             padding: 5px 5px 5px 10px;
         }
-        .link{
-            text-decoration: none;
-            color: black;
+        .flex{
+            display: flex;
         }
         .val{
-            color: #5f6263;
+            color: #939393;
         }
         .symbols{
             padding-right: 10px;
@@ -291,6 +294,27 @@
             /* background-color: #E4E6EB; */
             /* background-color: #f6f6f6; */
             background-color: #f8f8f8;
+        }
+        .next{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 50px 20px 50px;
+        }
+        .but{
+            width: 100px;
+            height: 40px;
+            background-color: #04AA6D;
+            border: 3px solid #04AA6D;
+            border-radius: 4px;
+            border: none;
+            color: white;
+            font-weight: 900;
+        }
+        .link{
+            text-decoration: none;
+            color: black;
+            width: 50%;
+            margin: 5px;
         }
         </style>
 </head>
@@ -303,16 +327,16 @@
                     <div class="bold">National Institute of Technology, Hamirpur</div>
                 </div>
             </div>
-            <div class="attributes bold">
+            <div class="attributes" id="dash">
                 <i class="material-icons symbols">dashboard</i><span style="padding-top: 3px;">Dashboard</span>
             </div>
-            <div class="attributes bold">
+            <div class="attributes" id="comp">
                 <i class="material-icons symbols">verified_user</i><span style="padding-top: 3px;">Completed</span>
             </div>
-            <div class="attributes bold">
+            <div class="attributes" id="incomp">
                 <i class="material-icons symbols">error</i><span style="padding-top: 3px;">Incompleted</span>
             </div>
-            <div class="attributes bold">
+            <div class="attributes" id="rej">
                 <span class="glyphicon glyphicon-remove-sign symbols" style="font-size: x-large;"></span><span style="padding-top: 3px;">Rejected</span>
             </div>
         </div>
@@ -474,188 +498,12 @@
                     <div class="val1">20dcs009@nith.ac.in</div>
                     <div class="val2">Completed</div>
                 </div>
-                <div class="values">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values alternate">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values alternate">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values alternate">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values alternate">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values alternate">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values alternate">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values alternate">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
-                <div class="values">
-                    <div class="val1">
-                        <img class="img" src="/img/userlogo.png" alt="">
-                        <div style="padding:0px 0px 0px 5px;">student</div>
-                    </div>
-                    <div class="val2">20DCS009</div>
-                    <div class="val1">Computer Science</div>
-                    <div class="val3">20</div>
-                    <div class="val2">Male</div>
-                    <div class="val1">20dcs009@nith.ac.in</div>
-                    <div class="val2">Completed</div>
-                </div>
             </div>
         </div>
+            <div class="next">
+                <button class="but">❮ Previous</button>
+                <button class="but">Next ❯</button>
+            </div>
         </div>
         <div class="right">
             <div class="userlogo">
@@ -667,10 +515,10 @@
                 </div>
             </div>
             <div class="pic">
-                <div class="rollno val bold">20dcs009</div>
+                <div class="rollno val">20dcs009</div>
                 <div class="fitim"><img class="fitimg" src="/img/userlogo.png" alt=""></div>
                 <div class="name bold">Student</div>
-                <div class="name val bold">Computer Science and Engineering</div>
+                <div class="name val ">Computer Science and Engineering</div>
             </div>
             <div class="alldetails">
                 <div class="details">
@@ -715,13 +563,43 @@
                 </div>
                 <div class="forms">
                     <div class="documents bold">Documents Uploaded</div>
-                    <div><a class="link" href="#">Registration form</a></div>
-                    <div><a class="link" href="#">Fee receipt</a></div>
-                    <div><a class="link" href="#">Caste certificate</a></div>
-                    <div><a class="link" href="#">Income certificate</a></div>
+                    <div>
+                        <div class="flex">
+                            <div class="link"><a href="#"><button class="but" style="width: 140px; height: 45px;">Registration Form</button></a></div>
+                            <div class="link"><a href="#"><button class="but" style="width: 140px; height: 45px;">Fee Receipt</button></a></div>
+                        </div>
+                        <div class="flex">
+                            <div class="link"><a href="#"><button class="but" style="width: 140px; height: 45px;">Caste Certificate</button></a></div>
+                            <div class="link"><a href="#"><button class="but" style="width: 140px; height: 45px;">Income Certificate</button></a></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        // const a=document.getElementById('dash');
+        // const b=document.getElementById('comp');
+        // const c=document.getElementById('incomp');
+        // const d=document.getElementById('rej');
+
+        // a.onclick=function(){
+        //     a.style.color="#1ee47a";
+        //     a.style.borderLeft="2px solid #1ee47a";
+        // }
+        // b.onclick=function(){
+        //     b.style.color="#1ee47a";
+        // }
+        // c.onclick=function(){
+        //     c.style.color="#1ee47a";
+        // }
+        // d.onclick=function(){
+        //     d.style.color="#1ee47a";
+        // }
+        // $("div.attributes").click(function(){
+        // $("div.attributes").css("color", "#1ee47a");
+        // $(this).css("color", "#5f6263;");
+        // });
+    </script>
 </body>
 </html>
