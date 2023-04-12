@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
         }
-        .main{
+
+        .main {
             display: flex;
             height: 100vh;
         }
-        .left{
+
+        .left {
             /* border: 1px solid green; */
             width: 25%;
             height: 100vh;
@@ -23,19 +26,22 @@
 
             color: white;
         }
-        .right{
+
+        .right {
             width: 75%;
             height: 100vh;
             background-color: rgb(182, 182, 182);
             overflow-y: hidden;
         }
-        .logo{
+
+        .logo {
             transform: translateY(20%);
             width: 50px;
             height: 50px;
             border-radius: 50%;
         }
-        .collegename{
+
+        .collegename {
             /* border-bottom: 1px solid white; */
             /* width: 100%;
             height: 500px; */
@@ -47,85 +53,104 @@
             /* color: black; */
             /* background-color: #dc3545; */
         }
-        .border{
+
+        .border {
             margin: 5px 10px;
             border: 1px solid white;
         }
-        .college{
+
+        .college {
             font-weight: 900;
             padding: 9px;
         }
-        .features{
+
+        .features {
             /* padding: 20px; */
             width: 100%;
             /* height: 300px; */
             /* border: 2px solid green; */
         }
-        .common{
+
+        .common {
             padding: 10px;
             padding-left: 30px;
         }
-        .common:hover{
+
+        .common:hover {
             background-color: rgb(64, 52, 52);
             cursor: pointer;
         }
-        .userlogo{
+
+        .userlogo {
             border-radius: 50%;
             margin: 5px;
             width: 45px;
             height: 45px;
         }
-        .floatright{
+
+        .floatright {
             margin: 10px;
             display: flex;
             float: right;
         }
-        .hellouser{
+
+        .hellouser {
             padding: 18px;
         }
-        .application{
+
+        .application {
             margin: 5px 6px;
             background-color: white;
             height: 100vh;
             border-radius: 5px;
         }
-        .first{
+
+        .first {
             display: flex;
             justify-content: center;
         }
-        .download{
+
+        .download {
             margin: 25px;
             display: flex;
             /* justify-content: center; */
         }
-        .space{
+
+        .space {
             margin: 20px;
         }
-        .type{
-            margin:-20px 70px;
+
+        .type {
+            margin: -20px 70px;
         }
-        .common2{
+
+        .common2 {
             padding: 3px;
         }
-        .common2:hover{
+
+        .common2:hover {
             background-color: rgb(222, 204, 204);
             cursor: pointer;
         }
-        .struc{
+
+        .struc {
             margin: 30px;
             display: flex;
             justify-content: space-between;
-           
+
         }
-        .boxing{
+
+        .boxing {
             /* width: 50vh; */
             gap: 40px;
         }
-        .docs{
+
+        .docs {
             margin: 30px;
             width: 60%;
         }
-        .common3{
+
+        .common3 {
             display: flex;
             margin: 3px;
             padding: 5px 10px;
@@ -136,14 +161,16 @@
             justify-content: space-between;
         }
 
-        .common4{
+        .common4 {
             display: flex;
         }
-        .nofile{
+
+        .nofile {
             margin: 0px 10px;
         }
-        .btn{
-            width: 100px;
+
+        .btn {
+            /* width: 100px; */
             height: 24px;
             color: white;
             font-weight: 900;
@@ -151,10 +178,11 @@
             border: none;
             cursor: pointer;
         }
+
         /* .btn:hover{
             background-color: rgb(64, 52, 52);;
         } */
-        .upload{
+        .upload {
             cursor: pointer;
             margin: 10px;
             width: 100px;
@@ -167,6 +195,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="main">
         <div class="left">
@@ -177,83 +206,114 @@
                 </div>
             </div>
             <div class="border"></div>
-            <div class="common">
+            <div class="common" id="dashDash">
                 <h3>Dashboard</h3>
             </div>
-            <div class="common">
+            <div class="common" id="dashDownlRegForm">
                 <h3>Download Registration Form</h3>
-            </div>
-            <div class="common">
-                <h3>Upload Docs</h3>
             </div>
         </div>
         <div class="right">
-            <nav style="height: 70px; background-color: white;">
+            <nav style="height: 70px; background-color: white; margin: 0 .4vw;border-radius: 5px;">
                 <div class="floatright">
                     <div class="hellouser">
-                        <h3><span style="font-weight: 100;">Welcome, </span><span>User</span></h3>
+                        <h3><span style="font-weight: 100;">Welcome, </span><span id="currUserName">User</span></h3>
                     </div>
                     <img src="/img/userlogo.png" alt="" class="userlogo">
                 </div>
             </nav>
-            <div class="application">
-                <div class="first">
-                    <img src="/img/logo.png" alt="" class="logo">
-                    <h1 style="padding: 20px;">National Institute of Technology, Hamirpur</h1>
-                </div>
-                <div class="struc">
-                    <div class="boxing">
-                        <h3>Select your Caste</h3>
-                            <input class="space" type="radio" name="caste" id=""><span>General</span>
-                            <input class="space" type="radio" name="caste" id=""><span>Obc-Ncl</span>
-                            <input class="space" type="radio" name="caste" id=""><span>Sc/St</span>
+
+            <!-- Code for submit form -->
+            <div id="homeRight" style="display: block;">
+                <div class="application">
+                    <div class="first">
+                        <img src="/img/logo.png" alt="" class="logo">
+                        <h1 style="padding: 20px;">National Institute of Technology, Hamirpur</h1>
                     </div>
-                    <div class="boxing">
-                        <h3>Select your Income</h3>
-                            <input class="space" type="radio" name="income" id=""><span>Less than ₹100000</span>
-                            <input class="space" type="radio" name="income" id=""><span>Less than ₹500000</span>
-                            <input class="space" type="radio" name="income" id=""><span>More than ₹500000</span>
-                    </div>
-                </div>
-                <div class="docs">
-                    <h3>Upload Docs</h3>
-                    <div class="common3">
-                        <div>Registration Form</div>
-                        <div class="common4">
-                            <div class="nofile">No file Chosen</div>
-                            <input type="button" value="Choose File" class="btn">
+                    <div class="struc">
+                        <div class="boxing" id="casteDiv">
+                            <h3>Select your Caste</h3>
+                            <input class="space" id="gen" type="radio" name="caste" value="gen"><span>General</span>
+                            <input class="space" id="obc" type="radio" name="caste" value="obc"><span>Obc-Ncl</span>
+                            <input class="space" id="sc" type="radio" name="caste" value="sc"><span>Sc/St</span>
+                        </div>
+                        <div class="boxing" style="display: none;" id="incomeDiv">
+                            <h3>Select your Income</h3>
+                            <input class="space" type="radio" name="income" value="1"><span>Less than ₹100000</span>
+                            <input class="space" type="radio" name="income" value="5"><span>Less than ₹500000</span>
+                            <input class="space" type="radio" name="income" value="m5"><span>More than ₹500000</span>
                         </div>
                     </div>
-                    <div class="common3">
-                        <div>Caste Certificate</div>
-                        <div class="common4">
-                            
-                            <div class="nofile">No file Chosen</div>
-                            <input type="button" value="Choose File" class="btn">
-                        </div>
-                        
+                    <div class="struc" id="toPayFee">
+                        <p>Fee to Pay : </p>
                     </div>
-                    <div class="common3">
-                        <div>Income Certificate</div>
-                        <div class="common4">
-                            
-                            <div class="nofile">No file Chosen</div>
-                            <input type="button" value="Choose File" class="btn">
+                    <div class="docs">
+                        <h3>Upload Docs</h3>
+                        <div class="common3">
+                            <div>Registration Form</div>
+                            <div class="common4">
+                                <!-- <div class="nofile">No file Chosen</div> -->
+                                <input type="file" id="regForm" value="Choose File" class="btn">
+                            </div>
                         </div>
-                        
-                    </div>
-                    <div class="common3">
-                        <div>Fee Receipt</div>
-                        <div class="common4">
-                            <div class="nofile">No file Chosen</div>
-                                <input type="button" value="Choose File" class="btn">
+                        <div class="common3">
+                            <div>Caste Certificate</div>
+                            <div class="common4">
+
+                                <!-- <div class="nofile">No file Chosen</div> -->
+                                <input type="file" id="castCert" value="Choose File" class="btn">
                             </div>
 
+                        </div>
+                        <div class="common3">
+                            <div>Income Certificate</div>
+                            <div class="common4">
+
+                                <!-- <div class="nofile">No file Chosen</div> -->
+                                <input type="file" id="incCert" value="Choose File" class="btn">
+                            </div>
+
+                        </div>
+                        <div class="common3">
+                            <div>Fee Receipt</div>
+                            <div class="common4">
+                                <!-- <div class="nofile">No file Chosen</div> -->
+                                <input type="file" id="feeRecp" value="Choose File" class="btn">
+                            </div>
+
+                        </div>
+                        <button class="upload" id="uploadbtn" type="submit">Upload</button>
                     </div>
-                    <button class="upload" type="submit">Upload</button>
                 </div>
             </div>
+
+
+            <!-- Code for Download form -->
+            <div id="downloadFromRight" style="display: none;">
+                <div class="application">
+                    <div class="first">
+                        <img src="/img/logo.png" alt="" class="logo">
+                        <h1 style="padding: 20px;">National Institute of Technology, Hamirpur</h1>
+                    </div>
+                    <div class="download">
+                        <h2 style="text-align: center;">Download Registration Form</h2>
+                        <h3 style="padding: 5px;">(Academic Year 2022-23)</h3>
+                    </div>
+                    <div class="type">
+                        <h3 class="common2">UG</h3>
+                        <h3 class="common2">PG</h3>
+                        <h3 class="common2">Ph.D Form-1</h3>
+                        <h3 class="common2">Ph.D Form-2</h3>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+
+
     </div>
 </body>
+<script src="/js/home.js"></script>
+
 </html>

@@ -2,6 +2,7 @@ var colgId = document.getElementById("colgId")
 var pass = document.getElementById("pass")
 var signInbtn = document.getElementById("signInbtn")
 var msg = document.getElementById("msg")
+var loading = document.getElementById("loading")
 
 signInbtn.addEventListener('click',(e)=>{
     e.preventDefault()
@@ -16,6 +17,7 @@ async function signIn() {
     
     const params = {
         method : "POST",
+        // mode:'no-cors',
         headers: {
             'Content-Type': 
             'application/json'
@@ -23,18 +25,29 @@ async function signIn() {
         body: JSON.stringify(userCrendentials)
     }
 
+    loading.style.display = "flex"
+try{
     await fetch("http://localhost:8080/auth/login/",params).then((res)=> res.json()).then((data)=>{
         console.log(data)
         if(data.msg == "User Created"){
-            console.log("klkajfkajkls")
+            loading.style.innerText = "Sucessfully Logged In !.."
             const UserData = {
                 "email" : data.email,
                 "token" : data.token
             }
             sessionStorage.setItem("userData",JSON.stringify(UserData))
-            window.location.replace("home.html")
+            setTimeout(() => {
+                window.location.replace("home.html")
+            }, 2000);
         }
+
+        loading.style.display = "none"
         msg.style.display = "block"
         msg.children[0].innerText = data.msg
-    })
+    
+    }
+    )}
+    catch(e){
+        console.log(e)
+    }
 }
