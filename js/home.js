@@ -30,10 +30,10 @@ function isuserSignedIn(){
     userData = sessionStorage.getItem("userData")
     userDetail = sessionStorage.getItem("userDetail")
     if(userData == null){
-        window.location.replace("signin.html")}
-    // }else if(userDetail == null){
-    //     window.location.replace("userDetail.html")
-    // }
+        window.location.replace("signin.html")
+    }else if(userDetail == null){
+        window.location.replace("userDetail.html")
+    }
     else{
         userData = JSON.parse(userData)
         currUserName.innerText = userData.email

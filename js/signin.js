@@ -9,8 +9,8 @@ var isStudent = true
 
 
 
-gender.forEach(gen=>{
-    gen.addEventListener('change',(e)=>{
+loginMember.forEach(mem=>{
+    mem.addEventListener('change',(e)=>{
         if(e.target.value == "student"){
             isStudent = true
         }else{
@@ -52,7 +52,8 @@ async function signIn() {
             const UserData = {
                 "email": data.email,
                 "token": data.token,
-                "fbId" : data.id
+                "fbId" : data.id,
+                "isStudent" : isStudent
             }
             sessionStorage.setItem("userData", JSON.stringify(UserData))
             setTimeout(() => {
