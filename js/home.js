@@ -30,8 +30,9 @@ function isuserSignedIn(){
     userData = sessionStorage.getItem("userData")
     userDetail = sessionStorage.getItem("userDetail")
     if(userData == null){
-        window.location.replace("signin.html")}
-    // }else if(userDetail == null){
+        window.location.replace("signin.html")
+    }
+    // else if(userDetail == null){
     //     window.location.replace("userDetail.html")
     // }
     else{
@@ -111,6 +112,7 @@ async function logout(){
     loading.children[0].innerText = "Logging Out !.."
     await fetch("https://semreg.study-ezy.tech/auth/logout/",{method:"POST"}).then((res)=>res.json()).then((data)=>{
         sessionStorage.clear()
+        console.log(data)
         setTimeout(() => {
             window.location.replace("signin.html")
         }, 1000);

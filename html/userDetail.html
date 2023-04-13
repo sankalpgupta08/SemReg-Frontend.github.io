@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Detail</title>
+    <title>Document</title>
     <link rel="stylesheet" href="/css/userDetail.css">
 </head>
 
@@ -22,29 +22,58 @@
                 <label>Gender :</label>
                 <br>
                 &nbsp;&nbsp;&nbsp;
-                <input type="radio" name="gender" value="male" id="male">
+                <input type="radio" name="gender" id="male" value="male">
                 &nbsp;
                 <span id="male">Male</span>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="gender" value="female" id="female">
+                <input type="radio" name="gender" id="female" value="female">
                 &nbsp;
                 <span id="female">Female</span>
+                
                 <br><br>
-                <label>Email :</label>
+                <label for="department">Choose your department:</label>
+                <select id="department" name="department">
+                  <option value="Architecture">Architecture</option>
+                  <option value="Civil">Civil</option>
+                  <option value="Computer Science and Engineering" selected>Computer Science and Engineering</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Chemical Engineering">Chemical Engineering</option>
+                  <option value="Electrics and Comminucation Engineering">Electrics and Comminucation Engineering</option>
+                  <option value="Mechanical Engineering">Mechanical Engineering</option>                  
+                </select>
+                <br><br>
+                <div id="hideProg">
+                <label for="programme">Choose your programme:</label>
+                <select id="programme" name="programme">
+                  <option value="Dual">Dual</option>
+                  <option value="B.tech" selected>B.tech </option>
+                  <option value="M.tech" selected>M.tech</option>
+                </select>
+                </div>
+                <br><br>
+                <label>DOB :</label>
                 <br>
-                <input type="email" name="email" id="name" placeholder="Enter Your Email">
+                <input type="date" name="email" id="DOB" placeholder="Enter Your DOB">
                 <br><br>
                 <label>Phone No. :</label>
                 <br>
-                <input type="Phone_No." name="Phone_No." id="name" placeholder="Enter Your Phone No.">
+                <input type="Phone_No." name="Phone_No." id="phno" placeholder="Enter Your Phone No.">
                 <br><br>
-                <input type="Submit" value="Submit" name="Submit" id="Submit">
+                <div style="justify-content: center
+                ; display: flex;">
+                <input type="Submit" value="Submit" name="Submit" id="submitbtn">
+
+               </div>
             </form>
         </div>
     </div>
 
+    <div id="loading" style="height: 100vh;width: 100vw;background-color: rgba(0, 0, 0, .7);position: absolute;top: 0;display: none; justify-content: center;align-items: center;">
+        <div style="color: white;height: fit-content;width: fit-content;font-size: 2rem;">
+          Adding Data ...
+        </div>
+      </div>
+
 </body>
-
 <script src="/js/userDetail.js"></script>
-
 </html>
