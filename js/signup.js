@@ -15,7 +15,7 @@ signupbtn.addEventListener('click',(e)=>{
 
 async function signUp(){
     let userCrendentials = {
-        "email" : colgId.value,
+        "email" : colgId.value + "@nith.ac.in",
         "password" : pass.value
     }
     let params = {
