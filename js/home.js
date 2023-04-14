@@ -15,6 +15,7 @@ var dashDash = document.getElementById('dashDash');
 var dashDownlRegForm = document.getElementById('dashDownlRegForm');
 var dashNoti = document.getElementById('dashNoti');
 var dashLogout = document.getElementById('dashLogout');
+var dashAbout = document.getElementById('dashAbout');
 var loading = document.getElementById('loading');
 var msg = document.getElementById('msg');
 
@@ -98,6 +99,12 @@ uploadbtn.addEventListener('click',(e)=>{
 dashNoti.addEventListener('click',(e)=>{
     e.preventDefault()
     window.location.replace("noti.html")
+})
+
+// about page 
+dashAbout.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.replace("about.html")
 })
 
 
