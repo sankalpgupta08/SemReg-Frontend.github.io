@@ -57,7 +57,7 @@ async function dotask(opt) {
     else if (opt.children[1].innerText == "Completed") {
         var url = `https://semreg.study-ezy.tech/semreg/teacher/filter/regcmplt/${_id}`
         await showStud(url)
-    } else if (opt.children[1].innerText == "Incompleted") {
+    } else if (opt.children[1].innerText == "Incomplete") {
         var url = `https://semreg.study-ezy.tech/semreg/teacher/filter/notregcmplt/${_id}`
         await showStud(url)
     } else if (opt.children[1].innerText == "Log Out") {

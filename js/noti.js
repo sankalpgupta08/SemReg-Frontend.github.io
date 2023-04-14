@@ -6,8 +6,8 @@ async function getNotifications(){
 
     const fbId = JSON.parse(sessionStorage.getItem("userData")).fbId
     await fetch(`https://semreg.study-ezy.tech/semreg/user/ouser/${fbId}`).then((res)=>res.json()).then((data)=>{
-        console.log(data.User.remark)
-        const userDetail = data.User
+        console.log(data.remark)
+        const userDetail = data
         if(userDetail.remark.length == 0){
             notiDiv.children[0].children[0].innerHTML = `No Notifications yet !!!`
         }else{
@@ -18,7 +18,7 @@ async function getNotifications(){
                 <img src="" alt="  ">
                 <div class="description">
                     <p class="user_activity ">
-                        <strong>Mohit sir</strong> ${userDetail.remark[noti]}
+                        <strong>Mohit sir : </strong> ${userDetail.remark[noti]}
                     </p>
                     <p class="time">1m ago</p>
                 </div>
