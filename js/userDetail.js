@@ -41,7 +41,7 @@ async function createUser() {
         console.log(typeof(userData.fbId), typeof(name1.value), typeof (roll_no), typeof (programme.value), typeof (phno.value), typeof (email), typeof (department.value), typeof (DOB.value), typeof (userGender))
 
         const userDetail = {
-            "_id": userData.fbId,
+            "fbid": userData.fbId,
             "name": name1.value,
             "roll_no": roll_no,
             "Program": programme.value,
@@ -74,7 +74,7 @@ async function createUser() {
 
     } else {
         const userDetail = {
-            "_id": userData.fbId,
+            "fbid": userData.fbId,
             "name": name1.value,
             "Phone_Number": phno.value,
             "email": email,
@@ -93,7 +93,7 @@ async function createUser() {
         }
 
         await fetch("https://semreg.study-ezy.tech/semreg/teacher/", params).then((res) => res.json()).then((data) => {
-            console.log(data)
+            console.log(data._id)
             sessionStorage.setItem("userDetail", JSON.stringify(data))
         })
 

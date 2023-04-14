@@ -27,17 +27,17 @@ var toDisablebtn = true
 
 // function for checking if any user is logged in or not
 function isuserSignedIn(){
-    userData = sessionStorage.getItem("userData")
-    userDetail = sessionStorage.getItem("userDetail")
+    userData = JSON.parse(sessionStorage.getItem("userData"))
+    userDetail = JSON.parse(sessionStorage.getItem("userDetail"))
+    console.log(userDetail)
     if(userData == null){
         window.location.replace("signin.html")
     }
-    // else if(userDetail == null){
-    //     window.location.replace("userDetail.html")
-    // }
+    else if(userDetail == null){
+        window.location.replace("userDetail.html")
+    }
     else{
-        userData = JSON.parse(userData)
-        currUserName.innerText = userData.email
+        currUserName.innerText = userDetail.name
     }
 }
 
@@ -122,13 +122,14 @@ async function logout(){
 
 
 async function uploadDoc(){
-    
+    console.log(userDetail._id)
     const docs = {
-        registrationForm : regForm.value,
-        feeDeduction : isfeeDeduction,
-        feeReceipt : feeRecp.value,
-        incomeCertificate : incCert.value,
-        castCertificate : castCert.value
+        "modelAId" : userDetail._id,
+        "registrationForm" : regForm.value,
+        "feeDeduction" : isfeeDeduction,
+        "feeReceipt" : feeRecp.value,
+        "incomeCertificate" : incCert.value,
+        "castCertificate" : castCert.value
     }
     
     const params = {
