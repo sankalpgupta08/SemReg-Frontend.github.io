@@ -47,7 +47,7 @@ async function signIn() {
 
 
     await fetch("https://semreg.study-ezy.tech/auth/login/",params).then((res)=> res.json()).then(async (data)=>{
-        console.log(data.msg)
+        console.log(data,"lksjfl")
         if(data.msg == "Logged In"){
             loading.children[0].innerText = "Sucessfully Logged In !.."
 
@@ -73,6 +73,9 @@ async function signIn() {
         <button type="button" class="btn-close abtn" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>`
         msg.children[0].innerText = data.msg
+        if(data.msg != "Logged In"){
+            loading.style.display = "none"
+        }
     }
     )
 }
@@ -80,6 +83,7 @@ async function signIn() {
 
 async function signInBack(data){
     // not working urls
+
     // await fetch(isStudent ? `https://semreg.study-ezy.tech/semreg/user/ouser/${data.id}` : `https://semreg.study-ezy.tech/semreg/teacher/${data.id}`).then((res)=>res.json()).then((data)=>{
     await fetch(isStudent ? `https://semreg.study-ezy.tech/semreg/user/ouser/${data.id}` : `https://semreg.study-ezy.tech/semreg/teacher/${data.id}`).then((res)=>res.json()).then((data)=>{
 
