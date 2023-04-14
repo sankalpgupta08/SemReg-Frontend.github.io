@@ -5,8 +5,25 @@ var userinfoDiv = document.getElementById("userinfoDiv")
 var curUser = document.getElementById("curUser")
 var userDetail = JSON.parse(sessionStorage.getItem("userDetail"))
 var listOfUsers = []
-var _id = userDetail._id
+var _id
 
+function isuserSignedIn(){
+    userData = JSON.parse(sessionStorage.getItem("userData"))
+    userDetail = JSON.parse(sessionStorage.getItem("userDetail"))
+    console.log(userDetail)
+    if(userData == null){
+        window.location.replace("signin.html")
+    }
+    else if(userDetail == null){
+        window.location.replace("userDetail.html")
+    }
+    else{
+        _id = userDetail._id
+        curUser.innerText = userDetail.name
+    }
+}
+
+isuserSignedIn()
 
 
 curUser.innerText = userDetail.name
